@@ -1,7 +1,6 @@
 <?php
     //open connection to mysql db
-    $connection = mysqli_connect("localhost","id6050580_igloo","qwerty123","id6050580_igloo") or die("Error " . mysqli_error($connection));
-
+  $connection = mysqli_connect("us-cdbr-iron-east-04.cleardb.net","b417e473b8c444","35ca274c","heroku_2de0804174260de") or die("Error " . mysqli_error($connection));
     //fetch table rows from mysql db
     $sql = "select * from thedaytoday";
     $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
