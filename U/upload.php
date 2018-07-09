@@ -33,7 +33,7 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
         if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
 
             // Insert image file name into database
-            $baseurl="http://igloostarshines.000webhostapp.com/U/uploads/";
+            $baseurl="https://igloostarshines.herokuapp.com/U/uploads/";
 
             $insert = $db->query("INSERT into images (file_name, uploaded_on) VALUES ('".$baseurl.$fileName."', NOW())");
 
