@@ -2,13 +2,13 @@
 
 // Database configuration
 
-$dbHost     = "localhost";
+$dbHost     = "us-cdbr-iron-east-04.cleardb.net";
 
-$dbUsername = "id6050580_igloo";
+$dbUsername = "b417e473b8c444";
 
-$dbPassword = "qwerty123";
+$dbPassword = "35ca274c";
 
-$dbName     = "id6050580_igloo";
+$dbName     = "heroku_2de0804174260de";
 
 
 
