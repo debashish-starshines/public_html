@@ -5,9 +5,9 @@ $dbUsername = "b417e473b8c444";
 $dbPassword = "35ca274c";
 $dbName     = "heroku_2de0804174260de";
 
-$link = mysql_connect('$dbHost', '$dbUsername', '$dbPassword','$dbName');
+$link = mysqli_connect('$dbHost', '$dbUsername', '$dbPassword','$dbName');
 if (!$link) {
-    die('Could not connect: ' . mysql_error());
+    die('Could not connect: ' . mysqli_error());
 }
 echo 'Connected successfully';
 
@@ -20,5 +20,5 @@ echo 'Connected successfully';
         // do stuff   
         mysqli_query($link,'TRUNCATE TABLE images,quotes,thedaytoday');
     }
-mysql_close($link);
+mysqli_close($link);
 ?>
