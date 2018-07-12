@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 } 
 
 // sql to truncate table
-$sql = "TRUNCATE TABLE images";//,quotes,thedaytoday
+$sql = "TRUNCATE TABLE images";
 
 if ($conn->query($sql) === TRUE) {
     echo "Tables truncated successfully";
