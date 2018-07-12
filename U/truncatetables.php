@@ -1,24 +1,26 @@
 <?php
+$servername = "us-cdbr-iron-east-04.cleardb.net";
+$username = "b417e473b8c444";
+$password = "35ca274c";
+$dbname = "heroku_2de0804174260de";
 
-$dbHost     = "us-cdbr-iron-east-04.cleardb.net";
-$dbUsername = "b417e473b8c444";
-$dbPassword = "35ca274c";
-$dbName     = "heroku_2de0804174260de";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
 
-$link = mysql_connect('$dbHost', '$dbUsername', '$dbPassword');//,'$dbName'
-if (!$link) {
-    die('Could not connect: ' . mysql_error());
+// sql to truncate table
+$sql = "TRUNCATE TABLE images,quotes,thedaytoday";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Tables truncated successfully";
+} else {
+    echo "Error truncating table: " . $conn->error;
 }
-echo 'Connected successfully';
 
-    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['TRUNCATE']))
-    {
-        func();
-    }
-    function func()
-    {
-        // do stuff   
-        mysql_query($link,'TRUNCATE TABLE images,quotes,thedaytoday');
-    }
-mysql_close($link);
+$conn->close();
+
+ 
 ?>
