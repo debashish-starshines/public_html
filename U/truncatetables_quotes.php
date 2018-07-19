@@ -10,7 +10,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 // sql to truncate table
-$sql = "TRUNCATE TABLE qoutes";
+$sql = "TRUNCATE TABLE quotes";
 if ($conn->query($sql) === TRUE) {
     echo "Tables truncated successfully";
 } else {
