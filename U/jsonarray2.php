@@ -12,7 +12,7 @@
         $emparray[] = $row;
     }
     //echo json_encode($emparray);
-    echo json_encode(array('igloohere' => $emparray)) ;
+    echo json_encode(array('igloo' => $emparray)) ;
 
     //close the db connection
     mysqli_close($connection); 
